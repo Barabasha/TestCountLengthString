@@ -6,16 +6,14 @@ public class TestCountLengthString {
 
     private CountLengthString testList = new CountLengthString();
 
-    @Test
-    public void testNull() {
+    @Test (expected = Exception.class)
+    public void testNull() throws Exception {
         ArrayList<Integer> result = testList.countLength(null);
-        ArrayList<Integer> actual_result = new ArrayList<>();
-        actual_result.add(0);
-        assertEquals(result, actual_result);
     }
 
+
     @Test
-    public void testEmpty() {
+    public void testEmpty() throws Exception {
         ArrayList<String> list = new ArrayList<>();
         list.add("");
         ArrayList<Integer> result = testList.countLength(list);
@@ -25,7 +23,7 @@ public class TestCountLengthString {
     }
 
     @Test
-    public void testHappyPath() {
+    public void testHappyPath() throws Exception {
         ArrayList<String> list = new ArrayList<>();
         list.add("Hello ");
         list.add("world!");

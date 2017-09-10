@@ -5,11 +5,10 @@ class CountLengthString {
     CountLengthString() {
     }
 
-    ArrayList<Integer> countLength(ArrayList<String> list) {
+    ArrayList<Integer> countLength(ArrayList<String> list) throws Exception { //throws Exception {
         ArrayList<Integer> num_list = new ArrayList<>();
         if (list == null) {
-            num_list.add(0);
-            return num_list;
+            throw new Exception("List is null");
         }
         for (String elem : list) {
             num_list.add(elem.length());
